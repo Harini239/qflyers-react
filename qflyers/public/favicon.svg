@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 36" fill="none">
+  <!-- Top Red Bar -->
+  <rect x="0" y="2" width="22" height="7" rx="1" fill="#F4604F" />
+  <!-- Middle & Vertical Left Stem -->
+  <path d="M0 13 H22 V19 H7 V30 H0 Z" fill="#000000" />
+  <!-- Right Tall Stem with Q Tail -->
+  <path d="M26 2 H33 V22 L40 29 H33 V30 H26 Z" fill="#000000" />
+</svg>
