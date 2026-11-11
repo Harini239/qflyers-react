@@ -129,32 +129,33 @@ export default function Contact() {
           {/* Card 1 – About */}
           <div className="contact-card__item">
             <div className="contact-card__badge" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              {/* QR / scan icon */}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                    strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3"  y="3"  width="6" height="6" rx="1.5" />
-                <rect x="15" y="3"  width="6" height="6" rx="1.5" />
-                <rect x="3"  y="15" width="6" height="6" rx="1.5" />
+                <rect x="3"  y="3"  width="6" height="6" rx="1" />
+                <rect x="15" y="3"  width="6" height="6" rx="1" />
+                <rect x="3"  y="15" width="6" height="6" rx="1" />
                 <path d="M15 15h2v2h-2zM15 20h5M20 15v5" />
               </svg>
             </div>
             <h2>ABOUT Q-FLYERS</h2>
-            <p>A Digital Menu Card SaaS is a cloud-based platform that allows restaurants</p>
+            <p>
+              <span>A Digital Menu Card SaaS is a cloud-based</span>
+              <span>platform that allows restaurants</span>
+            </p>
           </div>
 
           {/* Card 2 – Phone */}
           <div className="contact-card__item">
             <div className="contact-card__badge" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24
-                         11.4 11.4 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4
-                         a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.58 1 1 0 01-.24
-                         1.02l-2.2 2.19z" />
+              {/* Classic telephone handset */}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.4 11.4 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.58 1 1 0 01-.24 1.02l-2.2 2.19z" />
               </svg>
             </div>
             <h2>PHONE (LANDLINE)</h2>
             <p>
               <a href="tel:+914223563362">+91-4223563362</a>
-              <br />
               <a href="tel:+914223563362">+91-4223563362</a>
             </p>
           </div>
@@ -162,13 +163,16 @@ export default function Contact() {
           {/* Card 3 – Location */}
           <div className="contact-card__item">
             <div className="contact-card__badge" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13
-                         c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+              {/* Map pin */}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
               </svg>
             </div>
             <h2>LOCATION</h2>
-            <p>No 48, Kovai Thirunagar, Goldwins, Coimbatore-641004</p>
+            <p>
+              <span>No 48, Kovai Thirunagar, Goldwins,</span>
+              <span>Coimbatore-641004</span>
+            </p>
           </div>
 
         </div>

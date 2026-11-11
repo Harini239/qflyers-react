@@ -46,7 +46,7 @@ export const GOALS_DATA = [
     id: 'coffee-shop',
     category: 'COFFEE SHOP',
     title: 'FUEL YOUR AMBITION AT GOAL COFFEE',
-    summary: "A coffee shop named 'Goal Coffee' could have a really inspiring and cozy vibe! Imagine it being a place where people go to fuel their dreams, studying, or taking a much-needed break.",
+    summary: "A coffee shop named 'Goal Coffee' could have a really inspiring and cozy vibe! Imagine it being a place where people go to fuel their ambitions whether they're working on their dreams, studying, or taking a much-needed break.",
     fullText: "A coffee shop named “Goal Coffee” could have a really inspiring and cozy vibe! Imagine it being a place where people go to fuel their ambitions—whether they’re working on their dreams, studying, or taking a much-needed break. At Goal Coffee, we believe in more than just great coffee. We’re a space where creativity flows, ideas spark, and ambition thrives. Whether you’re working on your next big project, studying for exams, or simply taking a moment to unwind, Goal Coffee is here to fuel your journey.",
     image: '/images/goal-coffee.jpg',
   },

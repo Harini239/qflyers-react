@@ -1,0 +1,174 @@
+/* ═════════════════════════════════════════════════════════════════════
+   KEY FEATURES SECTION - EXACT LINE ALIGNMENT & PREMIUM ANIMATIONS
+   ═════════════════════════════════════════════════════════════════════ */
+
+.feat {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  max-width: 1000px;
+  margin: 50px auto 0;
+  align-items: center;
+  padding: 0 4vw;
+}
+
+/* Phone Mockup with subtle floating animation */
+.feat__phone-wrapper {
+  flex: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+}
+
+.feat__phone {
+  width: clamp(220px, 27vw, 310px);
+  height: auto;
+  display: block;
+  background: transparent;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.15));
+  object-fit: contain;
+  animation: featPhoneFloat 6s ease-in-out infinite alternate;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+.feat__phone:hover {
+  transform: translateY(-8px) scale(1.025);
+  filter: drop-shadow(0 24px 44px rgba(242, 107, 91, 0.22));
+}
+
+@keyframes featPhoneFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.4deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-0.3deg);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   EXACT HEADINGS & CONTENT LINE ALIGNMENT (MATCHING REFERENCE IMAGE)
+   ───────────────────────────────────────────────────────────────── */
+.feat__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.6vw, 28px);
+  text-align: left;
+}
+
+.feat__item {
+  text-align: left;
+  transition: transform 0.25s ease;
+}
+
+.feat__item:hover {
+  transform: translateX(4px);
+}
+
+.feat__item h3 {
+  font-family: var(--f2);
+  color: var(--head); /* #F26B5B */
+  font-size: clamp(18px, 2vw, 21px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 9px 0;
+  letter-spacing: -0.2px;
+  text-align: left;
+  transition: color 0.25s ease;
+}
+
+.feat__item:hover h3 {
+  color: #E24838;
+}
+
+.feat__item p {
+  font-family: var(--f2);
+  font-size: clamp(13px, 1.25vw, 14.5px);
+  font-weight: 500;
+  color: #1F1F1F;
+  line-height: 1.55;
+  margin: 0;
+  text-align: left;
+  letter-spacing: 0.05px;
+}
+
+/* Force exact line breaks as in the reference image on desktop & tablet */
+.feat__line {
+  display: block;
+}
+
+@media (min-width: 641px) {
+  .feat__line {
+    white-space: nowrap;
+  }
+}
+
+/* ─── Tablet (641px – 1024px) ─── */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .feat {
+    gap: clamp(18px, 3vw, 36px);
+    max-width: 760px;
+    padding: 0 3vw;
+  }
+  .feat__phone {
+    width: clamp(180px, 22vw, 240px);
+  }
+  .feat__item h3 {
+    font-size: clamp(16px, 2vw, 19px);
+  }
+  .feat__item p {
+    font-size: 12.5px;
+  }
+}
+
+/* ─── Mobile (≤640px) ─── */
+@media (max-width: 640px) {
+  .feat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+    padding: 0 5vw;
+  }
+  .feat__phone-wrapper {
+    justify-content: center;
+  }
+  .feat__phone {
+    width: min(60vw, 210px);
+  }
+  .feat__list {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-inline: 4px;
+  }
+  .feat__item {
+    text-align: left;
+  }
+  .feat__item h3 {
+    font-size: 17px;
+  }
+  .feat__item p {
+    font-size: 13px;
+  }
+  .feat__line {
+    white-space: normal;
+  }
+}
+
+/* ─── Small phones (≤400px) ─── */
+@media (max-width: 400px) {
+  .feat__phone {
+    width: min(70vw, 180px);
+  }
+  .feat__item h3 {
+    font-size: 15.5px;
+  }
+  .feat__item p {
+    font-size: 12px;
+  }
+}

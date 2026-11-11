@@ -1,0 +1,406 @@
+/* ═════════════════════════════════════════════════════════════════════
+   HOW IT WORKS SECTION - PIXEL-PERFECT ALIGNMENT & ANIMATIONS
+   ═════════════════════════════════════════════════════════════════════ */
+
+.how {
+  background: linear-gradient(180deg, #F8B2A9 0%, #F8B2A9 135px, var(--bg) 135px, var(--bg) 100%);
+  padding: 24px 5vw 190px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Purple main panel */
+.how__panel {
+  max-width: 1060px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #7043A8 0%, #8356B8 50%, #9566C6 100%);
+  border-radius: 26px;
+  padding: 34px 42px 28px;
+  color: #FFFFFF;
+  position: relative;
+  box-shadow: 0 20px 50px -10px rgba(112, 67, 168, 0.32);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   HEADING & SUBTITLE ALIGNMENT (Exact match with reference image)
+   "How it" and "Works" are on 2 separate lines, same bold font size
+   ───────────────────────────────────────────────────────────────── */
+.how h2,
+.how__title {
+  font-family: var(--f2);
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 38px);
+  line-height: 1.1;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.3px;
+  margin: 0;
+  text-align: left;
+}
+
+.how__title-line {
+  display: block;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.how h2 small,
+.how__title small {
+  display: block;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-bottom: 0;
+  letter-spacing: inherit;
+}
+
+.how__panel > p,
+.how__subtitle {
+  font-family: var(--f2);
+  font-size: 11px;
+  font-weight: 400;
+  max-width: 320px;
+  margin: 10px 0 65px;
+  position: relative;
+  z-index: 2;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.how__sub-line,
+.how__subtitle span {
+  display: block;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   TOP-RIGHT CORNER QR BADGE & FLOATING BUBBLES
+   ───────────────────────────────────────────────────────────────── */
+.how__qr-badge {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: clamp(74px, 8.2vw, 88px);
+  height: clamp(74px, 8.2vw, 88px);
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+  animation: qrBadgeFloat 6s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.how__qr-badge:hover {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.how__qr-badge svg {
+  width: 58%;
+  height: 58%;
+  display: block;
+}
+
+@keyframes qrBadgeFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+}
+
+/* Floating background bubbles */
+.how__qr-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 26px;
+  z-index: 1;
+}
+
+.how__bubble {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  will-change: transform;
+}
+
+.how__bubble svg {
+  width: 56%;
+  height: 56%;
+  display: block;
+}
+
+.how__bubble--1 {
+  top: 18px;
+  left: 48%;
+  width: 48px;
+  height: 48px;
+  animation: bubbleFloat1 7s ease-in-out infinite alternate;
+}
+
+.how__bubble--2 {
+  top: 52px;
+  left: 69%;
+  width: 54px;
+  height: 54px;
+  animation: bubbleFloat2 8.5s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
+}
+
+.how__bubble--3 {
+  top: 74px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  animation: bubbleFloat3 5.5s ease-in-out infinite alternate;
+  animation-delay: 1.5s;
+}
+
+.how__bubble--4 {
+  top: 68px;
+  left: 60%;
+  width: 26px;
+  height: 26px;
+  animation: bubbleFloat4 7.2s ease-in-out infinite alternate;
+  animation-delay: 0.4s;
+}
+
+.how__bubble--5 {
+  top: 26px;
+  left: 79%;
+  width: 26px;
+  height: 26px;
+  animation: bubbleFloat5 6s ease-in-out infinite alternate;
+  animation-delay: 1.2s;
+}
+
+@keyframes bubbleFloat1 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-8px) scale(1.06); }
+}
+
+@keyframes bubbleFloat2 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-10px) scale(1.08); }
+}
+
+@keyframes bubbleFloat3 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-5px) scale(0.95); }
+}
+
+@keyframes bubbleFloat4 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-7px) scale(1.05); }
+}
+
+@keyframes bubbleFloat5 {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-5px) scale(1.1); }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   IMAGE 2: NUMBER CIRCLE POSITIONING & CARD SIZING
+   ───────────────────────────────────────────────────────────────── */
+.how ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(14px, 1.8vw, 22px);
+  max-width: 980px;
+  margin: 0 auto -165px;
+  position: relative;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+}
+
+.how .card {
+  color: #000000;
+  text-align: center;
+  padding: 34px 14px 24px;
+  min-height: 295px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: visible; /* Allows circle to sit half outside */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.how .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 42px rgba(112, 67, 168, 0.16);
+}
+
+/* Image 2: Circle half on purple background, half on white card */
+.how .num {
+  position: absolute;
+  top: -19px; /* Half of 38px height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 2px solid #F4604F;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+  z-index: 6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how .card:hover .num {
+  transform: translateX(-50%) scale(1.14);
+  border-color: var(--purple);
+  box-shadow: 0 6px 16px rgba(112, 67, 168, 0.28);
+}
+
+/* Card illustration */
+.how .card img {
+  margin: 4px auto 10px;
+  background: transparent;
+  object-fit: contain;
+  height: 86px;
+  width: auto;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Micro-animations on hover */
+.how .card--step-1:hover img {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.how .card--step-2:hover img {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.how .card--step-3:hover img {
+  transform: scale(1.1) translateY(-3px);
+}
+
+.how .card--step-4:hover img {
+  transform: translateY(-8px) scale(1.12) rotate(4deg);
+}
+
+.how .card h3 {
+  color: var(--purple);
+  font-size: 15.5px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   IMAGE 3: CONTENT IN THE BOX EXACT 4-LINE ALIGNMENT
+   ───────────────────────────────────────────────────────────────── */
+.how__step-desc,
+.how .card p {
+  font-family: var(--f2);
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #757575;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+
+.how__step-line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Spacing compensation for the following section */
+.how + .sec {
+  padding-top: 60px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   RESPONSIVENESS (TABLET & MOBILE)
+   ───────────────────────────────────────────────────────────────── */
+@media (min-width: 601px) and (max-width: 980px) {
+  .how {
+    padding: 24px 5vw 120px;
+    background: linear-gradient(180deg, #F8B2A9 0%, #F8B2A9 120px, var(--bg) 120px, var(--bg) 100%);
+  }
+  .how__qr-badge {
+    top: -18px;
+    right: -14px;
+    width: 66px;
+    height: 66px;
+  }
+  .how__bubble--1 { left: 56%; }
+  .how__bubble--2 { display: none; }
+  .how__bubble--4 { display: none; }
+  .how__panel { padding: 30px 24px 22px; }
+  .how__panel > p,
+  .how__subtitle { margin-bottom: 34px; }
+  .how ol {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 580px;
+    margin: 0 auto -90px;
+    gap: 36px 18px;
+  }
+  .how .card {
+    min-height: 275px;
+    padding: 30px 14px 20px;
+  }
+  .how + .sec {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .how {
+    padding: 20px 5vw 80px;
+    background: linear-gradient(180deg, #F8B2A9 0%, #F8B2A9 90px, var(--bg) 90px, var(--bg) 100%);
+  }
+  .how__qr-badge {
+    top: -16px;
+    right: -12px;
+    width: 54px;
+    height: 54px;
+  }
+  .how__qr-decor {
+    display: none;
+  }
+  .how__panel {
+    padding: 26px 18px 16px;
+  }
+  .how__panel > p,
+  .how__subtitle {
+    margin-bottom: 26px;
+  }
+  .how ol {
+    grid-template-columns: 1fr;
+    max-width: 270px;
+    margin-inline: auto;
+    margin-bottom: -60px;
+    gap: 36px;
+  }
+  .how .card {
+    min-height: 265px;
+    padding: 30px 14px 20px;
+  }
+  .how + .sec {
+    padding-top: 60px;
+  }
+}
